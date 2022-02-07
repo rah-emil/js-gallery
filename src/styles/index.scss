@@ -1,0 +1,53 @@
+$white: #fff;
+$black: #000;
+
+.js-gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  box-sizing: border-box;
+
+  &__wrap {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    width: 900px;
+
+    &-img {
+      width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+    }
+
+    &-alt {
+      color: $white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: Raleway, Ubuntu, Arial, sans-serif;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.9);
+    z-index: 0;
+  }
+}
